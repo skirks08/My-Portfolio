@@ -25,7 +25,7 @@ nav {
     border-radius: 5px;
   }
   
-  a {
+  .clearfix a {
     display: inline-block;
     width: 150px;
     padding: 10px 0;
