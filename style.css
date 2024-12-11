@@ -53,6 +53,10 @@ nav {
     text-align: center;
   }
 
+  #background-home {
+    background-color: #28587B;
+  }
+
   @media only screen and (max-width: 800px) {
     h1 {
       display: none;  
