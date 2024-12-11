@@ -68,6 +68,32 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
+    <p>Have questions, feedback, or want to work together? I'd love to hear from you! Please fill out the form below or reach out directly via phone or email. I'll get back to you as soon as possible.</p>
+
+    <ul>
+      <li><strong>Email:</strong><a href="mailto:skirkamp@hotmail.com">skirkamp@hotmail.com</a></li>
+      <li><strong>Phone:</strong><a href="tel:7202803173">720 280 3173</a></li>
+    </ul>
+
+    <p>Alternatively, feel free to connect with me on Social Media</p>
+
+    <ul>
+      <li><a href="">LinkedIn</a></li>
+      <li><a href="">Twitter</a></li>
+    </ul>
+
+    <form action="/submit-contact" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
   </section>
 
 </body>
