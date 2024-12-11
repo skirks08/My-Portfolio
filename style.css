@@ -52,6 +52,80 @@ nav {
     text-align: center;
   }
 
+  /* Contact Section */
+
+  #contact {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #contact h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #28587B;
+  }
+
+  #contact p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  #contact ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  #contact ul li {
+    margin-bottom: 10px;
+  }
+
+  #contact a {
+    color: #F25F5C;
+    text-decoration: none;
+  }
+
+  #contact a:hover {
+    text-decoration: underline;
+  }
+
+  #contact form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  #contact label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  #contact input,
+  #contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  #contact button {
+    display: block;
+    background-color: #F25F5C;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  #contact button:hover {
+    background-color: #e24444;
+  }
+
 
   @media only screen and (max-width: 800px) {
     h1 {
