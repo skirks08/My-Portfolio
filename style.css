@@ -1,42 +1,65 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
 /* Navbar Section */
 
 nav {
-    padding: 25px;
-    font-family: 'Roboto', sans-serif;
+    padding: 20px 40px;
+    font-size: 16px;
     background-color: #F25F5C;
   }
   
   h1 {
-    float: left;
-    margin-top: 5px;
+    margin: 0;
     color: white;
-    font-size: 36px;
+    font-size: 32px;
   }
   
   ul {
-    float: right;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
   }
   
   li {
-    display: inline-block;
     margin-right: 25px;
-    text-align: center;
     background-color: #28587B;  
     border-radius: 5px;
   }
+
+  li:last-child {
+    margin-right: 0;
+  }
   
   .clearfix a {
-    display: inline-block;
-    width: 150px;
-    padding: 10px 0;
+    display: block;
+    padding: 12px 20px;
     text-decoration: none;
-    font-size: 24px;
+    text-align: center;
+    font-size: 18px;
     color: white;
-    text-shadow: 2px 2px 0 #bbbbbb;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .clearfix a:hover {
+    background-color: #1d451d;
   }
   
   .clearfix:after {
-     content: " ";
+     content: "";
      visibility: hidden;
      display: block;
      height: 0;
@@ -48,7 +71,75 @@ nav {
   #banner {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #28587B;
+    color: white;
+  }
+
+  #banner h2 {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  #banner span {
+    font-weight: bold;
+    font-size: 48px;
+    color: #F25F5C;
+  }
+
+  /* About Me Section */
+
+  #about {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f9;
+  }
+
+  #about h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .content-container p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  /* Projects Section */
+
+  #projects {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+  }
+
+  #projects h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  /* Skills Section */
+
+  #skills {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+  }
+
+  #skills h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
     text-align: center;
   }
 
@@ -57,7 +148,6 @@ nav {
   #contact {
     padding: 50px 20px;
     background-color: #f4f4f9;
-    font-family: 'Roboto', sans-serif;
   }
 
   #contact h2 {
@@ -109,16 +199,17 @@ nav {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 16px;
   }
 
   #contact button {
     display: block;
     background-color: #F25F5C;
     color: white;
-    padding: 10px 15px;
+    padding: 12px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 18px;
     cursor: pointer;
   }
 
@@ -126,19 +217,57 @@ nav {
     background-color: #e24444;
   }
 
+  /* Media Queries */
 
-  @media only screen and (max-width: 800px) {
+
+  @media (max-width: 800px) {
     h1 {
-      display: none;  
+      font-size: 28px;  
+    }
+
+    nav {
+      padding: 15px 20px;
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: center;
     }
   
     li {
-      margin-right: 10px;
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
     }
   
-    a {
-      width: 100px;
-      padding: 5px 0;
+    .clearfix a {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #banner h2 {
+      font-size: 28px;
+    }
+
+    #banner span {
+      font-size: 40px;
+    }
+
+    .content-container p {
+      font-size: 16px;
+    }
+
+    #contact form {
+      width: 100%;
+      padding: 20px;
+    }
+
+    #contact input,
+    #contact text-area,
+    #contact button {
+      padding: 12px;
       font-size: 16px;
     }
   }
