@@ -1,3 +1,5 @@
+/* Navbar Section */
+
 nav {
     padding: 25px;
     font-family: 'Roboto', sans-serif;
@@ -41,6 +43,11 @@ nav {
      clear: both;
   }
   
+  /* Header Section */
+  #banner {
+    text-align: center;
+  }
+
   @media only screen and (max-width: 800px) {
     h1 {
       display: none;  
