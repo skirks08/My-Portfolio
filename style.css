@@ -10,14 +10,17 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: #fff;
   color: #333;
+  line-height: 1.6;
 }
 
 /* Navbar Section */
 
 nav {
-    padding: 20px 40px;
-    font-size: 16px;
+    padding: 15px 40px;
     background-color: #F25F5C;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
   h1 {
@@ -28,16 +31,28 @@ nav {
   
   ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    justify-content: flex-end;
+    gap: 20px;
   }
   
   li {
     margin-right: 25px;
     background-color: #28587B;  
     border-radius: 5px;
+  }
+
+  li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 18px;
+    background: #28587B;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  li a:hover {
+    background: #1d451d;
   }
 
   li:last-child {
@@ -75,18 +90,18 @@ nav {
     align-items: center;
     text-align: center;
     padding: 100px 20px;
-    background-color: #28587B;
+    background: linear-gradient(to right, #28587B, #1d451d);
     color: white;
   }
 
   #banner h2 {
-    font-size: 36px;
+    font-size: 2.5rem;
     margin: 10px 0;
   }
 
   #banner span {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     color: #F25F5C;
   }
 
@@ -99,24 +114,21 @@ nav {
   }
 
   #about h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     color: #28587B;
   }
 
   .content-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
   }
 
   .content-container p {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 18px;
-    line-height: 1.8;
+    max-width: 600px;
+    font-size: 1.1rem;
     color: #555;
   }
 
@@ -153,9 +165,31 @@ nav {
   }
 
   #projects h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     text-align: center;
+  }
+
+  .project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .project-container div {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .project-container div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 
   /* Skills Section */
@@ -166,8 +200,8 @@ nav {
   }
 
   #skills h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     text-align: center;
     color: #28587B;
   }
@@ -180,7 +214,7 @@ nav {
   }
 
   .skill {
-    background-color: white;
+    background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -196,7 +230,7 @@ nav {
   }
 
   .skill-icon {
-    font-size: 48px;
+    font-size: 3rem;
     color: #F25F5C;
     margin-bottom: 10px;
   }
@@ -221,14 +255,13 @@ nav {
   }
 
   #contact h2 {
-    font-size: 28px;
+    font-size: 2rem;
     margin-bottom: 20px;
-    color: #28587B;
   }
 
   #contact p {
     margin-bottom: 15px;
-    line-height: 1.6;
+    font-size: 1.1rem;
     color: #333;
   }
 
@@ -254,16 +287,16 @@ nav {
   /* Contact Form */
 
   #contact-form {
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
-    background-color: #ffffff;
-    padding: 30px;
+    background: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .form-group label {
@@ -279,9 +312,7 @@ nav {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 16px;
-    color: #333;
-    background-color: #fafafa;
+    font-size: 1rem;
   }
 
   .form-group input:focus,
@@ -295,18 +326,18 @@ nav {
   }
 
   .submit-btn {
-    background-color: #F25F5C;
+    background: #F25F5C;
     color: white;
-    padding: 12px 20px;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 18px;
+    font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
 
   .submit-btn:hover {
-    background-color: #e24444;
+    background: #e24444;
   }
 
   /* Media Queries */
@@ -334,9 +365,15 @@ nav {
 /* For Tablets */
 
   @media (max-width: 768px) {
+    ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .skills-content {
       flex-direction: column;
       align-items: center;
+      gap: 15px;
     }
 
     .skill {
