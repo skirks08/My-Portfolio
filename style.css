@@ -169,6 +169,48 @@ nav {
     font-size: 36px;
     margin-bottom: 30px;
     text-align: center;
+    color: #28587B;
+  }
+
+  .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .skill {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .skill-icon {
+    font-size: 48px;
+    color: #F25F5C;
+    margin-bottom: 10px;
+  }
+
+  .skill h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #28587B;
+  }
+
+  .skill p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
   }
 
   /* Contact Section */
@@ -269,6 +311,40 @@ nav {
 
   /* Media Queries */
 
+/* For Small Screens */
+
+  @media (max-width: 480px) {
+    #skills h2 {
+      font-size: 28px;
+    }
+
+    .skill-icon {
+      font-size: 36px;
+    }
+
+    .skill h3 {
+      font-size: 20px;
+    }
+
+    .skill p {
+      font-size: 14px;
+    }
+  }
+
+/* For Tablets */
+
+  @media (max-width: 768px) {
+    .skills-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skill {
+      width: 80%;
+    }
+  }
+
+/* For General */
 
   @media (max-width: 800px) {
     h1 {
@@ -322,6 +398,30 @@ nav {
     .content-container p {
       font-size: 16px;
       line-height: 1.6;
+    }
+
+    .skills-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .skill {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+
+    .skill-icon {
+      font-size: 40px;
+    }
+
+    .skill h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .skill p {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
 
     #contact h2 {
