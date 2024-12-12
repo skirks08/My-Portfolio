@@ -165,6 +165,8 @@ nav {
     justify-content: center;
     gap: 30px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
   }
 
   .content-container p {
