@@ -1,20 +1,25 @@
 // Toggle Dark/Light Mode
 
-document.getElementById('toggle-theme').addEventListener('click', function() {
-    
-    // Toggle Dark mode class on body
-
-    document.body.classList.toggle('dark-mode');
-
-    // Change button icon/text based on current theme
-
-    const button = document.getElementById('toggle-theme');
-    if (document.body.classList.contains('dark-mode')) {
-        button.textContent = '☀️';
-    } else {
-        button.textContent = '🌙';
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('toggle-theme').textContent = '☀️';
     }
 });
+
+document.getElementById('toggle-theme').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    const button = document.getElementById('toggle-theme');
+
+    if (document.body.classList.contains('dark-mode')) {
+        button.textContent = '☀️';
+        localStorage.setItem('theme', 'dark');
+    } else {
+        button.textContent = '🌙';
+        localStorage.setItem('theme', 'light');
+    }
+});
+
 
 // Form Validation
 
