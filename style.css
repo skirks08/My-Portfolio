@@ -178,7 +178,7 @@ nav {
     margin: 0 auto;
   }
 
-  .project-container div {
+  .project-item {
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -187,9 +187,37 @@ nav {
     transition: transform 0.3s, box-shadow 0.3s;
   }
 
-  .project-container div:hover {
+  .project-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .project-item h3 {
+    font-size: 1.8rem;
+    color: #28587B;
+    margin-bottom: 10px;
+  }
+
+  .project-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .project-link {
+    text-decoration: none;
+    color: #F25F5C;
+    font-size: 1.1rem;
+    border: 1px solid #F25F5C;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+
+  .project-link:hover {
+    background-color: #F25F5C;
+    color: white;
   }
 
   /* Skills Section */
@@ -345,6 +373,14 @@ nav {
 /* For Small Screens */
 
   @media (max-width: 480px) {
+    .project-container {
+      grid-template-columns: 1fr;
+    }
+
+    .project-item {
+      padding: 15px;
+    }
+
     #skills h2 {
       font-size: 28px;
     }
@@ -368,6 +404,10 @@ nav {
     ul {
       flex-direction: column;
       gap: 10px;
+    }
+
+    .project-container {
+      grid-template-columns: 1fr 1fr;
     }
 
     .skills-content {
