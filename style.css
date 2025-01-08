@@ -433,11 +433,15 @@ nav {
 
   /* Media Queries */
 
-/* For Small Screens */
+/* For Small Screens (Mobile Phones) */
 
   @media (max-width: 480px) {
     .project-container {
       grid-template-columns: 1fr;
+    }
+
+    .skill {
+      width: 90%;
     }
 
     .project-item {
