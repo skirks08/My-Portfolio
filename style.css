@@ -440,6 +440,11 @@ nav {
       grid-template-columns: 1fr;
     }
 
+    .container {
+      flex-direction: column;
+      padding: 10px;
+    }
+
     .skill {
       width: 90%;
     }
